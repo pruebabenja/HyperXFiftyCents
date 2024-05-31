@@ -21,9 +21,9 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
     const document = doc[Math.floor(Math.random() * doc.length)];
-    const str = `┏━┣𝑶𝑷𝑪𝑰𝑶𝑵𝑬𝑺 𝑫𝑬 𝑴𝑬𝑵𝑼 𝑯𝒀𝑷𝑬𝑹𝑿┫━┓
+    const str = `┣ 𝑴𝑬𝑵𝑼 𝑯𝒀𝑷𝑬𝑹𝑿 ┫
 ╔══════════════╗
-┣✅𝑯𝒚𝒑𝒆𝒓𝑿 𝒕𝒆 𝒔𝒂𝒍𝒖𝒅𝒂 @${m.sender.split`@`[0]}
+┣▶𝑯𝒚𝒑𝒆𝒓𝑿 𝒕𝒆 𝒔𝒂𝒍𝒖𝒅𝒂 @${m.sender.split`@`[0]}
 ┣✅𝑷𝒐𝒓𝒇𝒂𝒗𝒐𝒓 𝒖𝒔𝒂 𝒍𝒐𝒔 𝒔𝒊𝒈𝒖𝒊𝒆𝒏𝒕𝒆𝒔 𝒄𝒐𝒎𝒂𝒏𝒅𝒐𝒔 𝒑𝒂𝒓𝒂 𝒗𝒆𝒓 𝒍𝒐𝒔 𝒎𝒆𝒏𝒖𝒔 𝒅𝒆 𝑯𝒚𝒑𝒆𝒓𝑿:
 ┣❗.𝒎𝒆𝒏𝒖𝒈𝒓𝒖𝒑𝒐𝒔 (𝑭𝒖𝒏𝒄𝒊𝒐𝒏𝒆𝒔 𝒑𝒓𝒊𝒏𝒄𝒊𝒑𝒂𝒍𝒆𝒔 𝒑𝒂𝒓𝒂 𝒆𝒍 𝒈𝒓𝒖𝒑𝒐)
 ┣❗.𝒎𝒆𝒏𝒖𝒇𝒇 (𝑭𝒖𝒏𝒄𝒊𝒐𝒏𝒆𝒔 𝒔𝒐𝒃𝒓𝒆 𝑭𝒓𝒆𝒆𝑭𝒊𝒓𝒆)                                          
