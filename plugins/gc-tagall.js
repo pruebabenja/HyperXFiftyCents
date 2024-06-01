@@ -6,7 +6,7 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
   }
   const pesan = args.join` `;
 const oi = `📩 𝑪𝑶𝑴𝑼𝑵𝑰𝑪𝑨𝑫𝑶: ${pesan}\n✅ 𝑰𝑵𝑻𝑬𝑮𝑹𝑨𝑵𝑻𝑬𝑺: _*${participants.length}*_`;
-  let teks = `🤖 𝑯𝒀𝑷𝑬𝑹𝑿 𝑳𝑶𝑺 𝑬𝑺𝑻𝑨 𝑰𝑵𝑽𝑶𝑪𝑨𝑵𝑫𝑶\n\n ${oi}\n\n┏➤❗ 𝑹𝑬𝑽𝑰𝑽𝑨𝑵 𝑴𝑹𝑫 ❗\n`;
+  let teks = `┣ *𝑬𝑻𝑰𝑸𝑼𝑬𝑻𝑨 𝑮𝑬𝑵𝑬𝑹𝑨𝑳 𝑯𝒀𝑷𝑬𝑹𝑿* ┫\n\n ${oi}\n\n┏➤❗ 𝑹𝑬𝑽𝑰𝑽𝑨𝑵 𝑴𝑹𝑫 ❗\n`;
   for (const mem of participants) {
     teks += `┣🎠 @${mem.id.split('@')[0]}\n`;
   }
