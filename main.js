@@ -108,7 +108,7 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = `XiaBot`;
+global.authFile = `MichiBot`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -197,7 +197,7 @@ const connectionOptions = {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
   },
-  browser: ['XiaBot', 'Safari', '1.0.0'],
+  browser: ['LudmiBot', 'Safari', '1.0.0'],
   version,
   defaultQueryTimeoutMs: undefined,
 };
@@ -250,7 +250,7 @@ function clearTmp() {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./XiaBot")
+let directorio = readdirSync("./MichiBot")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-') /*|| file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-') */
 })
@@ -281,7 +281,7 @@ console.log(chalk.bold.red(`=> Algo salio mal durante la eliminación, archivos 
 }}
 
 function purgeOldFiles() {
-const directories = ['./XiaBot/', './jadibts/']
+const directories = ['./MichiBot/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -312,7 +312,7 @@ async function connectionUpdate(update) {
   }
   if (global.db.data == null) loadDatabase();
   if (update.qr != 0 && update.qr != undefined) {
-    console.log(chalk.yellow('🔮ㅤXiaBot te pide que escanees este codigo QR, porque expira en 60 segundos.'));
+    console.log(chalk.yellow('🚩ㅤHYPER´V BOT te pide que escanees este codigo QR, porque expira en 60 segundos.'));
   }
   if (connection == 'open') {
     console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 𝙰𝙻 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 ✅\n│\n▣──────────────────────────────···'));
@@ -541,7 +541,7 @@ setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   const _uptime = process.uptime() * 1000;
   const uptime = clockString(_uptime);
-  const bio = `𝑯𝒚𝒑𝒆𝒓𝑿 𝑩𝒐𝒕 𝑨𝒄𝒕𝒊𝒗𝒐 | 𝑪𝒓𝒆𝒂𝒅𝒐𝒓 +51 936732723 ${uptime}`;
+  const bio = `🚀 𝑯𝒚𝒑𝒆𝒓𝑿 𝑩𝒐𝒕 𝑨𝒄𝒕𝒊𝒗𝒐 | 𝑪𝒓𝒆𝒂𝒅𝒐𝒓 +51 936732723 ${uptime}`;
   await conn.updateProfileStatus(bio).catch((_) => _);
 }, 60000);
 function clockString(ms) {
