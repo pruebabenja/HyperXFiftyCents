@@ -1441,7 +1441,7 @@ export async function participantsUpdate({id, participants, action}) {
               const responseb = await m.conn.groupParticipantsUpdate(id, [user], 'remove');
               if (responseb[0].status === '404') return;
               const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${user.split('@')[0]}:${user.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
-              await m.conn.sendMessage(id, {text: `*@${user.split('@')[0]} ᴇɴ ᴇsᴛᴇ ɢʀᴜᴘᴏ ɴᴏ sᴇ ᴘᴇʀᴍɪᴛᴇɴ ɴᴜᴍᴇʀᴏs ᴀʀᴀʙᴇs ᴏ ʀᴀʀᴏs, ᴘᴏʀ ʟᴏ ϙᴜᴇ sᴇ ᴛᴇ sᴀᴄᴀʀᴀ ᴅᴇʟ ɢʀᴜᴘᴏ*`, mentions: [user]}, {quoted: fkontak2});
+              await m.conn.sendMessage(id, {text: `*[❗] @${user.split('@')[0]} ᴇɴ ᴇsᴛᴇ ɢʀᴜᴘᴏ ɴᴏ sᴇ ᴘᴇʀᴍɪᴛᴇɴ ɴᴜᴍᴇʀᴏs ᴀʀᴀʙᴇs ᴏ ʀᴀʀᴏs, ᴘᴏʀ ʟᴏ ϙᴜᴇ sᴇ ᴛᴇ sᴀᴄᴀʀᴀ ᴅᴇʟ ɢʀᴜᴘᴏ*`, mentions: [user]}, {quoted: fkontak2});
               return;
             }
             await m.conn.sendFile(id, apii.data, 'pp.jpg', text, null, false, {mentions: [user]});
@@ -1539,19 +1539,19 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
 
 global.dfail = (type, m, conn) => {
   const msg = {
-        rowner: '𝑯𝒚𝒑𝒆𝒓𝑿 𝙩𝙚 𝙖𝙫𝙞𝙨𝙖 𝙦𝙪𝙚 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙪𝙨𝙖𝙙𝙤 𝙥𝙤𝙧 𝙢𝙞 𝙥𝙧𝙤𝙥𝙞𝙚𝙩𝙖𝙧𝙞𝙤',
-        owner: '𝑯𝒚𝒑𝒆𝒓𝑿 𝙩𝙚 𝙖𝙫𝙞𝙨𝙖 𝙦𝙪𝙚 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙪𝙨𝙖𝙙𝙤 𝙥𝙤𝙧 𝙢𝙞 𝙥𝙧𝙤𝙥𝙞𝙚𝙩𝙖𝙧𝙞𝙤',
-        mods: '𝑯𝒚𝒑𝒆𝒓𝑿 𝙩𝙚 𝙖𝙫𝙞𝙨𝙖 𝙦𝙪𝙚 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙪𝙨𝙖𝙙𝙤 𝙥𝙤𝙧 𝙢𝙞 𝙥𝙧𝙤𝙥𝙞𝙚𝙩𝙖𝙧𝙞𝙤',
-        premium: '𝑯𝒚𝒑𝒆𝒓𝑿 𝙩𝙚 𝙖𝙫𝙞𝙨𝙖 𝙦𝙪𝙚 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙪𝙨𝙖𝙙𝙤 𝙥𝙤𝙧 𝙢𝙞 𝙥𝙧𝙤𝙥𝙞𝙚𝙩𝙖𝙧𝙞𝙤',
-        group: '𝑯𝒚𝒑𝒆𝒓𝑿 𝙩𝙚 𝙖𝙫𝙞𝙨𝙖 𝙦𝙪𝙚 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙪𝙨𝙖𝙙𝙤 𝙚𝙣 𝙜𝙧𝙪𝙥𝙤𝙨',
-        private: '𝑯𝒚𝒑𝒆𝒓𝑿 𝙩𝙚 𝙖𝙫𝙞𝙨𝙖 𝙦𝙪𝙚 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙪𝙨𝙖𝙙𝙤 𝙚𝙣 𝙘𝙝𝙖𝙩 𝙥𝙧𝙞𝙫𝙖𝙙𝙤 𝙙𝙚𝙡 𝙗𝙤𝙩',
-        admin: '𝑯𝒚𝒑𝒆𝒓𝑿 𝙩𝙚 𝙖𝙫𝙞𝙨𝙖 𝙦𝙪𝙚 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙪𝙨𝙖𝙙𝙤 𝙥𝙤𝙧 𝙖𝙙𝙢𝙞𝙣𝙨 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤',
-        botAdmin: '𝑯𝒚𝒑𝒆𝒓𝑿 𝙩𝙚 𝙖𝙫𝙞𝙨𝙖 𝙦𝙪𝙚 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙚𝙡 𝙗𝙤𝙩 𝙙𝙚𝙗𝙚 𝙨𝙚𝙧 𝙖𝙙𝙢𝙞𝙣 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤 𝙣𝙚𝙘𝙚𝙨𝙖𝙧𝙞𝙖𝙢𝙚𝙣𝙩𝙚',
-        unreg: '𝑯𝒚𝒑𝒆𝒓𝑿 𝙏𝙀 𝘼𝙑𝙄𝙎𝘼 𝙌𝙐𝙀 𝙉𝙊 𝙀𝙎𝙏𝘼𝙎 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝘼𝘿𝙊\n\n𝙿𝙰𝚁𝙰 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙳𝙴𝙱𝙴𝚂 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙰𝚁𝚃𝙴, 𝚄𝚂𝙰 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾\n➣ .𝘳𝘦𝘨 𝘯𝘰𝘮𝘣𝘳𝘦.𝘦𝘥𝘢𝘥',
-        restrict: '𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙴𝚂𝚃𝙰 𝚁𝙴𝚂𝚃𝚁𝙸𝙽𝙶𝙸𝙳𝙾/𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾 𝙿𝙾𝚁 𝙳𝙴𝚂𝙸𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃'
+        rowner: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙃𝙔𝙋𝙀𝙍´𝙑 𝘽𝙊𝙏 𝐀𝐃𝐕𝐈𝐄𝐑𝐓𝐄 𝐐𝐔𝐄 𝐄𝐒𝐓𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐒𝐎𝐋𝐎 𝐏𝐔𝐄𝐃𝐄 𝐒𝐄𝐑 𝐔𝐓𝐈𝐋𝐈𝐙𝐀𝐃𝐎 𝐏𝐎𝐑 𝐄𝐋/𝐋𝐀 𝐏𝐑𝐎𝐏𝐈𝐄𝐓𝐀𝐑𝐈𝐎/𝐀 (𝐎𝐖𝐍𝐄𝐑) 𝐃𝐄𝐋 𝐁𝐎𝐓',
+        owner: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙃𝙔𝙋𝙀𝙍´𝙑 𝘽𝙊𝙏 𝐀𝐃𝐕𝐈𝐄𝐑𝐓𝐄 𝐐𝐔𝐄 𝐄𝐒𝐓𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐒𝐎𝐋𝐎 𝐏𝐔𝐄𝐃𝐄 𝐒𝐄𝐑 𝐔𝐓𝐈𝐋𝐈𝐙𝐀𝐃𝐎 𝐏𝐎𝐑 𝐄𝐋/𝐋𝐀 𝐏𝐑𝐎𝐏𝐈𝐄𝐓𝐀𝐑𝐈𝐎/𝐀 (𝐎𝐖𝐍𝐄𝐑) 𝐃𝐄𝐋 𝐁𝐎𝐓*',
+        mods: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙃𝙔𝙋𝙀𝙍´𝙑 𝘽𝙊𝙏 𝐀𝐃𝐕𝐈𝐄𝐑𝐓𝐄 𝐐𝐔𝐄 𝐄𝐒𝐓𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐒𝐎𝐋𝐎 𝐏𝐔𝐄𝐃𝐄 𝐒𝐄𝐑 𝐔𝐓𝐈𝐋𝐈𝐙𝐀𝐃𝐎 𝐏𝐎𝐑 𝐄𝐋/𝐋𝐀 𝐏𝐑𝐎𝐏𝐈𝐄𝐓𝐀𝐑𝐈𝐎/𝐀 (𝐎𝐖𝐍𝐄𝐑) 𝐃𝐄𝐋 𝐁𝐎𝐓*',
+        premium: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙃𝙔𝙋𝙀𝙍´𝙑 𝘽𝙊𝙏 𝐀𝐃𝐕𝐈𝐄𝐑𝐓𝐄 𝐐𝐔𝐄 𝐄𝐒𝐓𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐒𝐎𝐋𝐎 𝐏𝐔𝐄𝐃𝐄 𝐒𝐄𝐑 𝐔𝐓𝐈𝐋𝐈𝐙𝐀𝐃𝐎 𝐏𝐎𝐑 𝐄𝐋/𝐋𝐀 𝐏𝐑𝐎𝐏𝐈𝐄𝐓𝐀𝐑𝐈𝐎/𝐀 (𝐎𝐖𝐍𝐄𝐑) 𝐃𝐄𝐋 𝐁𝐎𝐓*',
+        group: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙃𝙔𝙋𝙀𝙍´𝙑 𝘽𝙊𝙏 𝐀𝐃𝐕𝐈𝐄𝐑𝐓𝐄 𝐐𝐔𝐄 𝐄𝐒𝐓𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐒𝐎𝐋𝐎 𝐏𝐔𝐄𝐃𝐄 𝐒𝐄𝐑 𝐔𝐓𝐈𝐋𝐈𝐙𝐀𝐃𝐎 𝐄𝐍 𝐆𝐑𝐔𝐏𝐎𝐒*',
+        private: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙃𝙔𝙋𝙀𝙍´𝙑 𝘽𝙊𝙏 𝐀𝐃𝐕𝐈𝐄𝐑𝐓𝐄 𝐐𝐔𝐄 𝐄𝐒𝐓𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐒𝐎𝐋𝐎 𝐏𝐔𝐄𝐃𝐄 𝐒𝐄𝐑 𝐔𝐓𝐈𝐋𝐈𝐙𝐀𝐃𝐎 𝐄𝐍 𝐂𝐇𝐀𝐓 𝐏𝐑𝐈𝐕𝐀𝐃𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓*',
+        admin: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙃𝙔𝙋𝙀𝙍´𝙑 𝘽𝙊𝙏 𝐀𝐃𝐕𝐈𝐄𝐑𝐓𝐄 𝐐𝐔𝐄 𝐄𝐒𝐓𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐒𝐎𝐋𝐎 𝐏𝐔𝐄𝐃𝐄 𝐒𝐄𝐑 𝐔𝐓𝐈𝐋𝐈𝐙𝐀𝐃𝐎 𝐏𝐎𝐑 𝐀𝐃𝐌𝐈𝐍𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎*',
+        botAdmin: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙃𝙔𝙋𝙀𝙍´𝙑 𝘽𝙊𝙏 𝐀𝐃𝐕𝐈𝐄𝐑𝐓𝐄 𝐐𝐔𝐄 𝐏𝐀𝐑𝐀 𝐏𝐎𝐃𝐄𝐑 𝐔𝐒𝐀𝐑 𝐄𝐒𝐓𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐄𝐒 𝐍𝐄𝐂𝐄𝐒𝐀𝐑𝐈𝐎 𝐐𝐔𝐄 𝐄𝐋 𝐁𝐎𝐓 𝐒𝐄𝐀 𝐀𝐃𝐌𝐈𝐍, 𝐀𝐒𝐂𝐄𝐍𝐃𝐄𝐑 𝐀 𝐀𝐃𝐌𝐈𝐍 𝐄𝐒𝐓𝐄 𝐍𝐔𝐌𝐄𝐑𝐎*',
+        unreg: '*[ 🛑 𝙃𝙔𝙋𝙀𝙍´𝙑 𝘽𝙊𝙏 𝐓𝐄 𝐀𝐕𝐈𝐒𝐀 𝐐𝐔𝐄 𝐍𝐎 𝐄𝐒𝐓𝐀𝐒 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐀𝐃𝐎 🛑 ]*\n\n*—◉ 𝙿𝙰𝚁𝙰 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙳𝙴𝙱𝙴𝚂 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙰𝚁𝚃𝙴, 𝚄𝚂𝙰 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾*\n*➣ /reg nombre.edad*',
+        restrict: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙴𝚂𝚃𝙰 𝚁𝙴𝚂𝚃𝚁𝙸𝙽𝙶𝙸𝙳𝙾/𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾 𝙿𝙾𝚁 𝙳𝙴𝚂𝙸𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*'
          }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
-  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '❱❱ 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝘾𝙄𝙊𝙉 ❰❰', body: '𝘟𝘪𝘢 𝘉𝘰𝘵 𝘗𝘳𝘰', thumbnail: imagen1, sourceUrl: 'https://www.instagram.com/usxr_angelito'}}}}, aa);
+  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '[ ⚠ ] 𝐀𝐕𝐈𝐒𝐎 - 𝐀𝐋𝐄𝐑𝐓𝐀', body: '𝐋𝐮𝐝𝐦𝐢𝐁𝐨𝐭', thumbnail: imagen1, sourceUrl: 'https://www.instagram.com/ventas_bot_ludmi'}}}}, aa);
   if (msg) return conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id});
 };
 
