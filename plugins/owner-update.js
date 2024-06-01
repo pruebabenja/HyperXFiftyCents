@@ -4,8 +4,8 @@ const handler = async (m, { conn, text }) => {
   try {
           const stdout = execSync('git pull' + (m.fromMe && text ? ' ' + text : ''));
           let messager = stdout.toString()
-          if (messager.includes('Already up to date.')) messager = '*[❗] No hay nada por actualizar, todo esta actualizado a como esta en el repositorio oficial.*'
-          if (messager.includes('Updating')) messager = '*[❗] Actualizaciones realizadas, cambios hechos:*\n\n' + stdout.toString()
+          if (messager.includes('Already up to date.')) messager = '*𝑯𝒚𝒑𝒆𝒓𝑿 𝒏𝒐 𝒅𝒆𝒕𝒆𝒄𝒕𝒐 𝒏𝒊𝒏𝒈𝒖𝒏 𝒄𝒂𝒎𝒃𝒊𝒐 𝒆𝒏 𝒆𝒍 𝒓𝒆𝒑𝒐𝒔𝒊𝒕𝒐𝒓𝒊𝒐.*'
+          if (messager.includes('Updating')) messager = '*𝑯𝒚𝒑𝒆𝒓𝑿 𝒂𝒄𝒕𝒖𝒂𝒍𝒊𝒛𝒐 𝒄𝒐𝒏 𝒆𝒙𝒊𝒕𝒐 𝒍𝒐𝒔 𝒄𝒂𝒎𝒃𝒊𝒐𝒔 𝒆𝒏 𝒆𝒍 𝒓𝒆𝒑𝒐𝒔𝒊𝒕𝒐𝒓𝒊𝒐.*\n\n' + stdout.toString()
           conn.reply(m.chat, messager, m);
   } catch {      
  try {    
