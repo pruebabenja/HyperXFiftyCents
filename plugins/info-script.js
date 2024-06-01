@@ -2,9 +2,9 @@ import moment from 'moment-timezone'
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, args }) => {
-   let res = await fetch('https://api.github.com/repos/Karim-off/XiaBot-Pro')
+   let res = await fetch('')
    let json = await res.json()
-   let txt = `*B O T  -  S C R I P T*\n\n`
+   let txt = `*┣ 𝑯𝒀𝑷𝑬𝑹𝑿 ┫*\n\n`
       txt += `        ◦  *Nombre* : ${json.name}\n`
       txt += `        ◦  *Visitas* : ${json.watchers_count}\n`
       txt += `        ◦  *Peso* : ${(json.size / 1024).toFixed(2)} MB\n`
@@ -12,7 +12,7 @@ let handler = async (m, { conn, args }) => {
       txt += `        ◦  *Url* : ${json.html_url}\n`
       txt += `        ◦  *Forks* : ${json.forks_count}\n`
       txt += `        ◦  *Stars* : ${json.stargazers_count}`
-   await conn.sendFile(m.chat, 'https://telegra.ph/file/9468197456d862aae9387.jpg', m)
+   await conn.sendFile(m.chat, '', m)
 
 }
 
