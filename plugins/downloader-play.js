@@ -9,13 +9,13 @@ if (!text) throw `𝙌𝙪𝙚 𝙚𝙨𝙩𝙖𝙨 𝙗𝙪𝙨𝙘𝙖𝙣𝙙
 try {
 const yt_play = await search(args.join(" "))
 let additionalText = ''
-if (command === 'play') {
+if (command === 'playx') {
 additionalText = '┣ *𝑯𝒀𝑷𝑬𝑹𝑿* ┫'
 } else if (command === 'play2') {
 additionalText = 'video 🎥'}
 await conn.sendMessage(m.chat, {
 text: `  *⇄ㅤ     ◁   ㅤ  ❚❚ㅤ     ▷ㅤ     ↻*
-03:24 ━━━━━◉─────── 06:37`, 
+05:24 ━━━━━◉─────── 17:37`, 
 contextInfo: {
 externalAdReply: {
 title: yt_play[0].title,
@@ -25,7 +25,7 @@ mediaType: 1,
 showAdAttribution: true,
 renderLargerThumbnail: true
 }}} , { quoted: m })
-if (command == 'play') {        
+if (command == 'playx') {        
 try {
 let q = '128kbps'
 let v = yt_play[0].url
@@ -95,7 +95,7 @@ await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimet
 } catch {
 }}}}} catch {
 }}
-handler.command = ['play', 'play2']
+handler.command = ['playx', 'play2']
 handler.exp = 0
 export default handler
 
