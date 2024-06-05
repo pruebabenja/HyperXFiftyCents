@@ -1,4 +1,4 @@
-console.log('🔮ㅤIniciando XiaBot...');
+console.log('Iniciando HyperX...');
 import {join, dirname} from 'path';
 import {createRequire} from 'module';
 import {fileURLToPath} from 'url';
@@ -17,7 +17,7 @@ say('Xia\nBot\nMD', {
   font: 'block',
   align: 'center',
   gradient: ['blue', 'blue']});
-say(`La mejor Bot de WhatsApp By: Angelito`, {
+say(`El mejor Bot de WhatsApp By: HyperX`, {
   font: 'console',
   align: 'center',
   gradient: ['blue', 'blue']});
